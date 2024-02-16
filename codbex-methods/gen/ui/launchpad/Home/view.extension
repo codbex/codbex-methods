@@ -1,0 +1,5 @@
+{
+    "module": "codbex-methods/gen/ui/launchpad/Home/view.js",
+    "extensionPoint": "codbex-methods-view",
+    "description": "codbex-methods - Application View"
+}
