@@ -2,7 +2,7 @@
     "schema": {
         "structures": [
             {
-                "name": "PAYMENTMETHOD",
+                "name": "CODBEX_PAYMENTMETHOD",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -22,7 +22,7 @@
                 ]
             },
             {
-                "name": "SENTMETHODS",
+                "name": "CODBEX_SENTMETHODS",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -43,5 +43,5 @@
             }
         ]
     },
-    "datasource": "CODBEX"
+    "datasource": "DefaultDB"
 }

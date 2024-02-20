@@ -68,7 +68,7 @@ interface SentMethodsEntityEvent {
 export class SentMethodsRepository {
 
     private static readonly DEFINITION = {
-        table: "SENTMETHODS",
+        table: "CODBEX_SENTMETHODS",
         properties: [
             {
                 name: "Id",
@@ -87,7 +87,7 @@ export class SentMethodsRepository {
 
     private readonly dao;
 
-    constructor(dataSource = "CODBEX") {
+    constructor(dataSource?: string) {
         this.dao = daoApi.create(SentMethodsRepository.DEFINITION, null, dataSource);
     }
 
@@ -104,7 +104,7 @@ export class SentMethodsRepository {
         const id = this.dao.insert(entity);
         this.triggerEvent({
             operation: "create",
-            table: "SENTMETHODS",
+            table: "CODBEX_SENTMETHODS",
             entity: entity,
             key: {
                 name: "Id",
@@ -119,7 +119,7 @@ export class SentMethodsRepository {
         this.dao.update(entity);
         this.triggerEvent({
             operation: "update",
-            table: "SENTMETHODS",
+            table: "CODBEX_SENTMETHODS",
             entity: entity,
             key: {
                 name: "Id",
@@ -149,7 +149,7 @@ export class SentMethodsRepository {
         this.dao.remove(id);
         this.triggerEvent({
             operation: "delete",
-            table: "SENTMETHODS",
+            table: "CODBEX_SENTMETHODS",
             entity: entity,
             key: {
                 name: "Id",
@@ -164,7 +164,7 @@ export class SentMethodsRepository {
     }
 
     public customDataCount(options?: SentMethodsEntityOptions): number {
-        const resultSet = query.execute('SELECT COUNT(*) AS COUNT FROM "SENTMETHODS"');
+        const resultSet = query.execute('SELECT COUNT(*) AS COUNT FROM "CODBEX_SENTMETHODS"');
         if (resultSet !== null && resultSet[0] !== null) {
             if (resultSet[0].COUNT !== undefined && resultSet[0].COUNT !== null) {
                 return resultSet[0].COUNT;

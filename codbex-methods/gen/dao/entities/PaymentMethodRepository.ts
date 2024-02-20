@@ -68,7 +68,7 @@ interface PaymentMethodEntityEvent {
 export class PaymentMethodRepository {
 
     private static readonly DEFINITION = {
-        table: "PAYMENTMETHOD",
+        table: "CODBEX_PAYMENTMETHOD",
         properties: [
             {
                 name: "Id",
@@ -87,7 +87,7 @@ export class PaymentMethodRepository {
 
     private readonly dao;
 
-    constructor(dataSource = "CODBEX") {
+    constructor(dataSource?: string) {
         this.dao = daoApi.create(PaymentMethodRepository.DEFINITION, null, dataSource);
     }
 
@@ -104,7 +104,7 @@ export class PaymentMethodRepository {
         const id = this.dao.insert(entity);
         this.triggerEvent({
             operation: "create",
-            table: "PAYMENTMETHOD",
+            table: "CODBEX_PAYMENTMETHOD",
             entity: entity,
             key: {
                 name: "Id",
@@ -119,7 +119,7 @@ export class PaymentMethodRepository {
         this.dao.update(entity);
         this.triggerEvent({
             operation: "update",
-            table: "PAYMENTMETHOD",
+            table: "CODBEX_PAYMENTMETHOD",
             entity: entity,
             key: {
                 name: "Id",
@@ -149,7 +149,7 @@ export class PaymentMethodRepository {
         this.dao.remove(id);
         this.triggerEvent({
             operation: "delete",
-            table: "PAYMENTMETHOD",
+            table: "CODBEX_PAYMENTMETHOD",
             entity: entity,
             key: {
                 name: "Id",
@@ -164,7 +164,7 @@ export class PaymentMethodRepository {
     }
 
     public customDataCount(options?: PaymentMethodEntityOptions): number {
-        const resultSet = query.execute('SELECT COUNT(*) AS COUNT FROM "PAYMENTMETHOD"');
+        const resultSet = query.execute('SELECT COUNT(*) AS COUNT FROM "CODBEX_PAYMENTMETHOD"');
         if (resultSet !== null && resultSet[0] !== null) {
             if (resultSet[0].COUNT !== undefined && resultSet[0].COUNT !== null) {
                 return resultSet[0].COUNT;
