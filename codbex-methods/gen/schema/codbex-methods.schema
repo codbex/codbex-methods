@@ -22,7 +22,7 @@
                 ]
             },
             {
-                "name": "CODBEX_SENTMETHODS",
+                "name": "CODBEX_SENTMETHOD",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -30,14 +30,18 @@
                         "length": 0,
                         "primaryKey": true,
                         "identity": true,
+                        "precision": "NaN",
+                        "scale": "NaN",
                         "nullable": true,
-                        "name": "SENTMETHODS_ID"
+                        "name": "SENTMETHOD_ID"
                     },
                     {
                         "type": "VARCHAR",
                         "length": 20,
+                        "precision": "NaN",
+                        "scale": "NaN",
                         "nullable": true,
-                        "name": "SENTMETHODS_NAME"
+                        "name": "SENTMETHOD_NAME"
                     }
                 ]
             }
