@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "table": "CODBEX_PAYMENTMETHOD",
+      "schema": "PUBLIC",
+      "file": "/codbex-methods-data/payment-methods.csv",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true
+    },
+    {
+      "table": "CODBEX_SENTMETHOD",
+      "schema": "PUBLIC",
+      "file": "/codbex-methods-data/sent-methods.csv",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true
+    }
+  ]
+}
