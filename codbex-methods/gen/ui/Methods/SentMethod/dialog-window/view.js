@@ -7,7 +7,7 @@ const viewData = {
     id: "SentMethod-details",
     label: "SentMethod",
     link: "/services/web/codbex-methods/gen/ui/Methods/SentMethod/dialog-window/index.html",
-    perspectiveName: "Methods"
+    perspectiveName: "Methods",
 };
 
 if (typeof exports !== 'undefined') {

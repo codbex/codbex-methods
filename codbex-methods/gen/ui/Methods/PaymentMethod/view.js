@@ -9,7 +9,7 @@ const viewData = {
     factory: "frame",
     region: "center",
     link: "/services/web/codbex-methods/gen/ui/Methods/PaymentMethod/index.html",
-    perspectiveName: "Methods"
+    perspectiveName: "Methods",
 };
 
 if (typeof exports !== 'undefined') {

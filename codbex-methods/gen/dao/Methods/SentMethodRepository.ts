@@ -163,7 +163,7 @@ export class SentMethodRepository {
         return this.dao.count(options);
     }
 
-    public customDataCount(options?: SentMethodEntityOptions): number {
+    public customDataCount(): number {
         const resultSet = query.execute('SELECT COUNT(*) AS COUNT FROM "CODBEX_SENTMETHOD"');
         if (resultSet !== null && resultSet[0] !== null) {
             if (resultSet[0].COUNT !== undefined && resultSet[0].COUNT !== null) {
@@ -176,7 +176,7 @@ export class SentMethodRepository {
     }
 
     private async triggerEvent(data: SentMethodEntityEvent) {
-        const triggerExtensions = await extensions.loadExtensionModules("codbex-methods/Methods/SentMethod", ["trigger"]);
+        const triggerExtensions = await extensions.loadExtensionModules("codbex-methods-Methods-SentMethod", ["trigger"]);
         triggerExtensions.forEach(triggerExtension => {
             try {
                 triggerExtension.trigger(data);
@@ -184,6 +184,6 @@ export class SentMethodRepository {
                 console.error(error);
             }            
         });
-        producer.topic("codbex-methods/Methods/SentMethod").send(JSON.stringify(data));
+        producer.topic("codbex-methods-Methods-SentMethod").send(JSON.stringify(data));
     }
 }

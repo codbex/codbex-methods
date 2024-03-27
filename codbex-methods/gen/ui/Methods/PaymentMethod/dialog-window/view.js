@@ -7,7 +7,7 @@ const viewData = {
     id: "PaymentMethod-details",
     label: "PaymentMethod",
     link: "/services/web/codbex-methods/gen/ui/Methods/PaymentMethod/dialog-window/index.html",
-    perspectiveName: "Methods"
+    perspectiveName: "Methods",
 };
 
 if (typeof exports !== 'undefined') {

@@ -163,7 +163,7 @@ export class PaymentMethodRepository {
         return this.dao.count(options);
     }
 
-    public customDataCount(options?: PaymentMethodEntityOptions): number {
+    public customDataCount(): number {
         const resultSet = query.execute('SELECT COUNT(*) AS COUNT FROM "CODBEX_PAYMENTMETHOD"');
         if (resultSet !== null && resultSet[0] !== null) {
             if (resultSet[0].COUNT !== undefined && resultSet[0].COUNT !== null) {
@@ -176,7 +176,7 @@ export class PaymentMethodRepository {
     }
 
     private async triggerEvent(data: PaymentMethodEntityEvent) {
-        const triggerExtensions = await extensions.loadExtensionModules("codbex-methods/Methods/PaymentMethod", ["trigger"]);
+        const triggerExtensions = await extensions.loadExtensionModules("codbex-methods-Methods-PaymentMethod", ["trigger"]);
         triggerExtensions.forEach(triggerExtension => {
             try {
                 triggerExtension.trigger(data);
@@ -184,6 +184,6 @@ export class PaymentMethodRepository {
                 console.error(error);
             }            
         });
-        producer.topic("codbex-methods/Methods/PaymentMethod").send(JSON.stringify(data));
+        producer.topic("codbex-methods-Methods-PaymentMethod").send(JSON.stringify(data));
     }
 }

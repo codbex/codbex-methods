@@ -7,7 +7,7 @@ const viewData = {
     id: "PaymentMethod-filter",
     label: "PaymentMethod Filter",
     link: "/services/web/codbex-methods/gen/ui/Methods/PaymentMethod/dialog-filter/index.html",
-    perspectiveName: "Methods"
+    perspectiveName: "Methods",
 };
 
 if (typeof exports !== 'undefined') {
