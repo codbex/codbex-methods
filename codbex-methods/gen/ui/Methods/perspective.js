@@ -4,11 +4,11 @@
  * Do not modify the content as it may be re-generated again.
  */
 const perspectiveData = {
-	id: "Methods",
-	name: "Methods",
-	link: "/services/web/codbex-methods/gen/ui/Methods/index.html",
-	order: "100",
-	icon: "/services/web/resources/unicons/archive.svg",
+	id: 'Methods',
+	name: 'Methods',
+	link: '/services/web/codbex-methods/gen/ui/Methods/index.html',
+	order: 100,
+	icon: '/services/web/resources/unicons/archive.svg',
 };
 
 if (typeof exports !== 'undefined') {

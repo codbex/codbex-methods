@@ -8,6 +8,7 @@
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
   "templateId": "template-application-angular/template/template.js",
+  "dataSource": "DefaultDB",
   "perspectives": {
     "Methods": {
       "views": [
@@ -92,6 +93,7 @@
       "title": "PaymentMethod",
       "tooltip": "PaymentMethod",
       "type": "PRIMARY",
+      "dataSource": "DefaultDB",
       "referencedProjections": [],
       "primaryKeys": [
         "Id"
@@ -173,6 +175,7 @@
       "title": "SentMethod",
       "tooltip": "SentMethod",
       "type": "PRIMARY",
+      "dataSource": "DefaultDB",
       "referencedProjections": [],
       "primaryKeys": [
         "Id"

@@ -87,7 +87,7 @@ export class SentMethodRepository {
 
     private readonly dao;
 
-    constructor(dataSource?: string) {
+    constructor(dataSource = "DefaultDB") {
         this.dao = daoApi.create(SentMethodRepository.DEFINITION, null, dataSource);
     }
 
