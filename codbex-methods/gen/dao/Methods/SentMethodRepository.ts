@@ -65,6 +65,10 @@ interface SentMethodEntityEvent {
     }
 }
 
+interface SentMethodUpdateEntityEvent extends SentMethodEntityEvent {
+    readonly previousEntity: SentMethodEntity;
+}
+
 export class SentMethodRepository {
 
     private static readonly DEFINITION = {
@@ -116,11 +120,13 @@ export class SentMethodRepository {
     }
 
     public update(entity: SentMethodUpdateEntity): void {
+        const previousEntity = this.findById(entity.Id);
         this.dao.update(entity);
         this.triggerEvent({
             operation: "update",
             table: "CODBEX_SENTMETHOD",
             entity: entity,
+            previousEntity: previousEntity,
             key: {
                 name: "Id",
                 column: "SENTMETHOD_ID",
@@ -175,7 +181,7 @@ export class SentMethodRepository {
         return 0;
     }
 
-    private async triggerEvent(data: SentMethodEntityEvent) {
+    private async triggerEvent(data: SentMethodEntityEvent | SentMethodUpdateEntityEvent) {
         const triggerExtensions = await extensions.loadExtensionModules("codbex-methods-Methods-SentMethod", ["trigger"]);
         triggerExtensions.forEach(triggerExtension => {
             try {

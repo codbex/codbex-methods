@@ -65,6 +65,10 @@ interface PaymentMethodEntityEvent {
     }
 }
 
+interface PaymentMethodUpdateEntityEvent extends PaymentMethodEntityEvent {
+    readonly previousEntity: PaymentMethodEntity;
+}
+
 export class PaymentMethodRepository {
 
     private static readonly DEFINITION = {
@@ -116,11 +120,13 @@ export class PaymentMethodRepository {
     }
 
     public update(entity: PaymentMethodUpdateEntity): void {
+        const previousEntity = this.findById(entity.Id);
         this.dao.update(entity);
         this.triggerEvent({
             operation: "update",
             table: "CODBEX_PAYMENTMETHOD",
             entity: entity,
+            previousEntity: previousEntity,
             key: {
                 name: "Id",
                 column: "PAYMENTMETHOD_ID",
@@ -175,7 +181,7 @@ export class PaymentMethodRepository {
         return 0;
     }
 
-    private async triggerEvent(data: PaymentMethodEntityEvent) {
+    private async triggerEvent(data: PaymentMethodEntityEvent | PaymentMethodUpdateEntityEvent) {
         const triggerExtensions = await extensions.loadExtensionModules("codbex-methods-Methods-PaymentMethod", ["trigger"]);
         triggerExtensions.forEach(triggerExtension => {
             try {

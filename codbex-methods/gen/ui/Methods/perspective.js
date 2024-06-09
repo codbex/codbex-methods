@@ -5,7 +5,7 @@
  */
 const perspectiveData = {
 	id: 'Methods',
-	name: 'Methods',
+	name: 'methods',
 	link: '/services/web/codbex-methods/gen/ui/Methods/index.html',
 	order: 100,
 	icon: '/services/web/resources/unicons/archive.svg',

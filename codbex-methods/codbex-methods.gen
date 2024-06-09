@@ -4,11 +4,12 @@
   "brandUrl": "https://www.codbex.com/",
   "title": "Methods Managing module",
   "description": "Module for managing methods",
+  "dataSource": "DefaultDB",
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
   "templateId": "template-application-angular/template/template.js",
-  "dataSource": "DefaultDB",
+  "fileName": "codbex-methods",
   "perspectives": {
     "Methods": {
       "views": [
@@ -18,7 +19,8 @@
       "name": "Methods",
       "label": "Methods",
       "order": "100",
-      "icon": "/services/web/resources/unicons/archive.svg"
+      "icon": "/services/web/resources/unicons/archive.svg",
+      "role": ""
     }
   },
   "models": [
@@ -79,7 +81,7 @@
       "dataCount": "SELECT COUNT(*) AS COUNT FROM \"CODBEX_PAYMENTMETHOD\"",
       "dataName": "PAYMENTMETHOD",
       "dataQuery": "",
-      "disableGeneration": "false",
+      "generateReport": "false",
       "icon": "/services/web/resources/unicons/file.svg",
       "layoutType": "MANAGE",
       "menuIndex": "100",
@@ -88,11 +90,13 @@
       "name": "PaymentMethod",
       "navigationPath": "/Home",
       "perspectiveIcon": "/services/web/resources/unicons/archive.svg",
+      "perspectiveLabel": "methods",
       "perspectiveName": "Methods",
       "perspectiveOrder": "100",
+      "perspectiveRole": "",
       "title": "PaymentMethod",
       "tooltip": "PaymentMethod",
-      "type": "PRIMARY",
+      "type": "SETTING",
       "dataSource": "DefaultDB",
       "referencedProjections": [],
       "primaryKeys": [
@@ -161,7 +165,7 @@
       "dataCount": "SELECT COUNT(*) AS COUNT FROM \"CODBEX_SENTMETHOD\"",
       "dataName": "SENTMETHOD",
       "dataQuery": "",
-      "disableGeneration": "false",
+      "generateReport": "false",
       "icon": "/services/web/resources/unicons/file.svg",
       "layoutType": "MANAGE",
       "menuIndex": "100",
@@ -170,11 +174,13 @@
       "name": "SentMethod",
       "navigationPath": "/Home",
       "perspectiveIcon": "/services/web/resources/unicons/archive.svg",
+      "perspectiveLabel": "methods",
       "perspectiveName": "Methods",
       "perspectiveOrder": "100",
+      "perspectiveRole": "",
       "title": "SentMethod",
       "tooltip": "SentMethod",
-      "type": "PRIMARY",
+      "type": "SETTING",
       "dataSource": "DefaultDB",
       "referencedProjections": [],
       "primaryKeys": [

@@ -44,7 +44,7 @@
                 "dataCount": "SELECT COUNT(*) AS COUNT FROM \"${tablePrefix}PAYMENTMETHOD\"",
                 "dataName": "PAYMENTMETHOD",
                 "dataQuery": "",
-                "disableGeneration": "false",
+                "generateReport": "false",
                 "icon": "/services/web/resources/unicons/file.svg",
                 "layoutType": "MANAGE",
                 "menuIndex": "100",
@@ -53,11 +53,13 @@
                 "name": "PaymentMethod",
                 "navigationPath": "/Home",
                 "perspectiveIcon": "/services/web/resources/unicons/archive.svg",
+                "perspectiveLabel": "methods",
                 "perspectiveName": "Methods",
                 "perspectiveOrder": "100",
+                "perspectiveRole": "",
                 "title": "PaymentMethod",
                 "tooltip": "PaymentMethod",
-                "type": "PRIMARY"
+                "type": "SETTING"
             },
             {
                 "properties": [
@@ -106,7 +108,7 @@
                 "dataCount": "SELECT COUNT(*) AS COUNT FROM \"${tablePrefix}SENTMETHOD\"",
                 "dataName": "SENTMETHOD",
                 "dataQuery": "",
-                "disableGeneration": "false",
+                "generateReport": "false",
                 "icon": "/services/web/resources/unicons/file.svg",
                 "layoutType": "MANAGE",
                 "menuIndex": "100",
@@ -115,11 +117,13 @@
                 "name": "SentMethod",
                 "navigationPath": "/Home",
                 "perspectiveIcon": "/services/web/resources/unicons/archive.svg",
+                "perspectiveLabel": "methods",
                 "perspectiveName": "Methods",
                 "perspectiveOrder": "100",
+                "perspectiveRole": "",
                 "title": "SentMethod",
                 "tooltip": "SentMethod",
-                "type": "PRIMARY"
+                "type": "SETTING"
             }
         ],
         "perspectives": [
@@ -127,7 +131,8 @@
                 "name": "Methods",
                 "label": "methods",
                 "icon": "/services/web/resources/unicons/archive.svg",
-                "order": "100"
+                "order": "100",
+                "role": {}
             }
         ],
         "navigations": []
