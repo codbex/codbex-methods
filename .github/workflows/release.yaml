@@ -1,0 +1,35 @@
+name: Release - Module
+
+on:
+  workflow_dispatch:
+    inputs:
+      release-version:
+        description: Release Version
+        required: true
+        default: 1.0.0
+
+run-name: 'version set to ${{ inputs.release-version }} for release'
+
+jobs:
+  main:
+    uses: codbex/codbex-infra/.github/workflows/module-release.yaml@main
+    with:
+      packages: codbex-methods,codbex-methods-data
+      packages-build: codbex-methods
+      release-version: ${{ inputs.release-version }}
+      release-content: |
+        ## codbex-methods - ${{ inputs.release-version }}
+  
+        Methods Management Module
+  
+        ## Installation
+  
+        ```
+        npm install @codbex/codbex-methods@${{ inputs.release-version }}
+        npm install @codbex/codbex-methods-data@${{ inputs.release-version }}
+        ```
+  
+        ## Access points:
+  
+        - [/services/web/codbex-methods/gen/](http://localhost:80/services/web/codbex-methods/gen/) - Admin Panel
+    secrets: inherit
