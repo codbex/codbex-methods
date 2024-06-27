@@ -1,0 +1,45 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "CODBEX_PAYMENTMETHOD",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PAYMENTMETHOD_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PAYMENTMETHOD_NAME"
+                    }
+                ]
+            },
+            {
+                "name": "CODBEX_SENTMETHOD",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "SENTMETHOD_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "SENTMETHOD_NAME"
+                    }
+                ]
+            }
+        ]
+    },
+    "datasource": "DefaultDB"
+}
