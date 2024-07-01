@@ -1,0 +1,5 @@
+{
+    "module": "codbex-methods/gen/codbex-methods/ui/Methods/PaymentMethod/dialog-filter/view.js",
+    "extensionPoint": "codbex-methods-dialog-window",
+    "description": "codbex-methods - Application Dialog Window"
+}
