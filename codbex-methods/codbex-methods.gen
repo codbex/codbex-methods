@@ -6,11 +6,11 @@
   "description": "Module for managing methods",
   "dataSource": "DefaultDB",
   "fileName": "codbex-methods",
+  "genFolderName": "codbex-methods",
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
   "templateId": "template-application-angular/template/template.js",
-  "genFolderName": "codbex-methods",
   "perspectives": {
     "Methods": {
       "views": [
