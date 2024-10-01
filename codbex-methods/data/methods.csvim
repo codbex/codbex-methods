@@ -3,7 +3,7 @@
     {
       "table": "CODBEX_PAYMENTMETHOD",
       "schema": "PUBLIC",
-      "file": "/codbex-methods-data/payment-methods.csv",
+      "file": "/codbex-methods/data/payment-methods.csv",
       "header": true,
       "useHeaderNames": true,
       "delimField": ",",
@@ -13,7 +13,7 @@
     {
       "table": "CODBEX_SENTMETHOD",
       "schema": "PUBLIC",
-      "file": "/codbex-methods-data/sent-methods.csv",
+      "file": "/codbex-methods/data/sent-methods.csv",
       "header": true,
       "useHeaderNames": true,
       "delimField": ",",
