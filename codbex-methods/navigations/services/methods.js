@@ -1,6 +1,6 @@
 const navigationData = {
     id: 'methods-navigation',
-    label: "Methods",
+    label: "Payment Methods",
     view: "methods",
     group: "configurations",
     orderNumber: 1000,
