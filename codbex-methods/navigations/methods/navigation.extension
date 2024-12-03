@@ -1,5 +1,5 @@
 {
     "extensionPoint": "dashboard-navigations",
-    "module": "codbex-methods/navigations/services/methods.js",
+    "module": "codbex-methods/navigations/methods/service.js",
     "description": "Methods Navigation"
 }
