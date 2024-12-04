@@ -1,7 +1,7 @@
 const navigationData = {
     id: 'methods-navigation',
     label: "Payment Methods",
-    group: "reference-data",
+    group: "metadata",
     order: 2400,
     link: "/services/web/codbex-methods/gen/codbex-methods/ui/Methods/index.html?embedded"
 };
