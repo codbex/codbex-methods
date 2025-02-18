@@ -4,11 +4,11 @@
  * Do not modify the content as it may be re-generated again.
  */
 const viewData = {
-    id: "SentMethod",
-    label: "SentMethod",
+    id: "PaymentMethod-details",
+    label: "PaymentMethod",
     factory: "frame",
-    region: "left",
-    link: "/services/web/codbex-methods/gen/codbex-methods/ui/Methods/SentMethod/index.html",
+    region: "center",
+    link: "/services/web/codbex-methods/gen/codbex-methods/ui/Methods/PaymentMethod/main-details/index.html",
     perspectiveName: "Methods",
 };
 
