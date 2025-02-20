@@ -2,7 +2,7 @@ const navigationData = {
     id: 'methods-navigation',
     label: "Sent Methods",
     group: "reference data",
-    order: 3900,
+    order: 2600,
     link: "/services/web/codbex-methods/gen/codbex-methods/ui/SentMethod/index.html?embedded"
 };
 
