@@ -1,0 +1,5 @@
+{
+    "module": "codbex-methods/gen/codbex-methods/ui/SentMethod/SentMethod/tile.js",
+    "extensionPoint": "codbex-methods-tile",
+    "description": "codbex-methods - Application Tile"
+}

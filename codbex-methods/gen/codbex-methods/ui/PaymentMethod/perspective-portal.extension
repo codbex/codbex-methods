@@ -1,0 +1,5 @@
+{
+    "module": "codbex-methods/gen/codbex-methods/ui/PaymentMethod/perspective.js",
+    "extensionPoint": "portal",
+    "description": "codbex-methods - Perspective - PaymentMethod"
+}
