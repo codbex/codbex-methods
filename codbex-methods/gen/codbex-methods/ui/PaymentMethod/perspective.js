@@ -7,8 +7,8 @@ const perspectiveData = {
 	id: 'PaymentMethod',
 	name: 'PaymentMethod',
 	link: '/services/web/codbex-methods/gen/codbex-methods/ui/PaymentMethod/index.html',
-	order: 100,
-	icon: '/services/web/resources/unicons/archive.svg',
+	order: '100',
+	icon: '/services/web/resources/unicons/archive.svg'
 };
 
 if (typeof exports !== 'undefined') {

@@ -1,5 +1,6 @@
 {
     "module": "codbex-methods/gen/codbex-methods/ui/SentMethod/SentMethod/tile.js",
     "extensionPoint": "codbex-methods-tile",
-    "description": "codbex-methods - Application Tile"
+    "description": "codbex-methods - Application Tile",
+    "role": "codbex-methods.SentMethod.SentMethodReadOnly,codbex-methods.SentMethod.SentMethodFullAccess"
 }

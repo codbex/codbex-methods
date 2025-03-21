@@ -1,5 +1,6 @@
 {
     "extensionPoint": "dashboard-navigations",
     "module": "codbex-methods/navigations/payment-method/service.js",
-    "description": "Payment Method Navigation"
+    "description": "Payment Method Navigation",
+    "role": "codbex-methods.PaymentMethod.PaymentMethodReadOnly,codbex-methods.PaymentMethod.PaymentMethodFullAccess"
 }
