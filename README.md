@@ -1,6 +1,6 @@
 # codbex-methods
 
-Mathods Management Application
+Methods Management Application
 
 ### Model
 
