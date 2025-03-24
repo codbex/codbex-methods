@@ -1,5 +1,6 @@
 {
     "extensionPoint": "dashboard-navigations",
     "module": "codbex-methods/navigations/sent-method/service.js",
-    "description": "Sent Method Navigation"
+    "description": "Sent Method Navigation",
+    "role": "codbex-methods.SentMethod.SentMethodFullAccess,codbex-methods.SentMethod.SentMethodReadOnly"
 }

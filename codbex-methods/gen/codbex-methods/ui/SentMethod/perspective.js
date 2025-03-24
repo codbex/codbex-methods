@@ -7,8 +7,8 @@ const perspectiveData = {
 	id: 'SentMethod',
 	name: 'SentMethod',
 	link: '/services/web/codbex-methods/gen/codbex-methods/ui/SentMethod/index.html',
-	order: 200,
-	icon: '/services/web/resources/unicons/archive.svg',
+	order: '200',
+	icon: '/services/web/resources/unicons/archive.svg'
 };
 
 if (typeof exports !== 'undefined') {

@@ -1,5 +1,6 @@
 {
     "module": "codbex-methods/gen/codbex-methods/ui/SentMethod/SentMethod/dialog-window/view.js",
-    "extensionPoint": "codbex-methods-dialog-window",
-    "description": "codbex-methods - Application Dialog Window"
+    "extensionPoint": "dialog-window",
+    "description": "codbex-methods - Application Dialog Window",
+    "role": "codbex-methods.SentMethod.SentMethodReadOnly,codbex-methods.SentMethod.SentMethodFullAccess"
 }

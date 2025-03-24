@@ -7,7 +7,18 @@
   "dataSource": "DefaultDB",
   "fileName": "codbex-methods",
   "genFolderName": "codbex-methods",
-  "roles": [],
+  "roles": [
+    {
+      "entityName": "PaymentMethod",
+      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
+      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess"
+    },
+    {
+      "entityName": "SentMethod",
+      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
+      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
+    }
+  ],
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
@@ -92,7 +103,7 @@
       "dataName": "PAYMENTMETHOD",
       "dataQuery": "",
       "description": "Manage entity PaymentMethod",
-      "generateDefaultRoles": "false",
+      "generateDefaultRoles": "true",
       "generateReport": "false",
       "icon": "/services/web/resources/unicons/file.svg",
       "layoutType": "MANAGE",
@@ -106,6 +117,8 @@
       "perspectiveName": "PaymentMethod",
       "perspectiveOrder": "100",
       "perspectiveRole": "",
+      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
+      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess",
       "title": "PaymentMethod",
       "tooltip": "PaymentMethod",
       "type": "SETTING",
@@ -173,7 +186,7 @@
       "dataName": "SENTMETHOD",
       "dataQuery": "",
       "description": "Manage entity SentMethod",
-      "generateDefaultRoles": "false",
+      "generateDefaultRoles": "true",
       "generateReport": "false",
       "icon": "/services/web/resources/unicons/file.svg",
       "layoutType": "MANAGE",
@@ -187,6 +200,8 @@
       "perspectiveName": "SentMethod",
       "perspectiveOrder": "200",
       "perspectiveRole": "",
+      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
+      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess",
       "title": "SentMethod",
       "tooltip": "SentMethod",
       "type": "SETTING",
