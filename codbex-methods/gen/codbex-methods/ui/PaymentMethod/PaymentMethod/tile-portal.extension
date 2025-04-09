@@ -1,6 +1,0 @@
-{
-    "module": "codbex-methods/gen/codbex-methods/ui/PaymentMethod/PaymentMethod/tile.js",
-    "extensionPoint": "portal-tile",
-    "description": "codbex-methods - Application Tile",
-    "role": "codbex-methods.PaymentMethod.PaymentMethodReadOnly,codbex-methods.PaymentMethod.PaymentMethodFullAccess"
-}
