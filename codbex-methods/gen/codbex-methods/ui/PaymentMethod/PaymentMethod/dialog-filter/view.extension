@@ -1,6 +1,0 @@
-{
-    "module": "codbex-methods/gen/codbex-methods/ui/PaymentMethod/PaymentMethod/dialog-filter/view.js",
-    "extensionPoint": "dialog-window",
-    "description": "codbex-methods - Application Dialog Window",
-    "role": "codbex-methods.PaymentMethod.PaymentMethodReadOnly,codbex-methods.PaymentMethod.PaymentMethodFullAccess"
-}

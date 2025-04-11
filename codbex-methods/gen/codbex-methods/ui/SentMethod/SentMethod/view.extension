@@ -1,6 +1,0 @@
-{
-    "module": "codbex-methods/gen/codbex-methods/ui/SentMethod/SentMethod/view.js",
-    "extensionPoint": "codbex-methods-view",
-    "description": "codbex-methods - Application View",
-    "role": "codbex-methods.SentMethod.SentMethodReadOnly,codbex-methods.SentMethod.SentMethodFullAccess"
-}
