@@ -9,10 +9,10 @@ externalDocs:
 servers:
   - url: /services/ts
 tags:
-  - name: PaymentMethod
-  - name: SentMethod
+  - name: Settings
+  - name: Settings
 paths:
-  /codbex-methods/gen/codbex-methods/api/PaymentMethod/PaymentMethodService.ts:
+  /codbex-methods/gen/codbex-methods/api/Settings/PaymentMethodService.ts:
     get:
       summary: List PaymentMethod
       parameters:
@@ -33,7 +33,7 @@ paths:
             type: integer
             allowEmptyValue: true
       tags:
-        - PaymentMethod
+        - Settings
       responses:
         200:
           description: Successful Request
@@ -64,7 +64,7 @@ paths:
     post:
       summary: Create PaymentMethod
       tags:
-        - PaymentMethod
+        - Settings
       requestBody:
         content:
           application/json:
@@ -96,7 +96,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-methods/gen/codbex-methods/api/PaymentMethod/PaymentMethodService.ts/{id}:
+  /codbex-methods/gen/codbex-methods/api/Settings/PaymentMethodService.ts/{id}:
     get:
       summary: Get PaymentMethod by Id
       parameters:
@@ -107,7 +107,7 @@ paths:
           schema:
             type: string
       tags:
-        - PaymentMethod
+        - Settings
       responses:
         200:
           description: Successful Request
@@ -145,7 +145,7 @@ paths:
           schema:
             type: string
       tags:
-        - PaymentMethod
+        - Settings
       requestBody:
         content:
           application/json:
@@ -193,7 +193,7 @@ paths:
           schema:
             type: string
       tags:
-        - PaymentMethod
+        - Settings
       responses:
         204:
           description: Successful Request
@@ -215,11 +215,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-methods/gen/codbex-methods/api/PaymentMethod/PaymentMethodService.ts/count:
+  /codbex-methods/gen/codbex-methods/api/Settings/PaymentMethodService.ts/count:
     get:
       summary: Count the number of PaymentMethod
       tags:
-        - PaymentMethod
+        - Settings
       responses:
         200:
           description: Successful Request
@@ -243,7 +243,7 @@ paths:
     post:
       summary: Count the number of PaymentMethod by PaymentMethodFilterOptions
       tags:
-        - PaymentMethod
+        - Settings
       requestBody:
         content:
           application/json:
@@ -325,11 +325,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-methods/gen/codbex-methods/api/PaymentMethod/PaymentMethodService.ts/search:
+  /codbex-methods/gen/codbex-methods/api/Settings/PaymentMethodService.ts/search:
     post:
       summary: Search PaymentMethod by PaymentMethodFilterOptions
       tags:
-        - PaymentMethod
+        - Settings
       requestBody:
         content:
           application/json:
@@ -412,7 +412,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-methods/gen/codbex-methods/api/SentMethod/SentMethodService.ts:
+  /codbex-methods/gen/codbex-methods/api/Settings/SentMethodService.ts:
     get:
       summary: List SentMethod
       parameters:
@@ -433,7 +433,7 @@ paths:
             type: integer
             allowEmptyValue: true
       tags:
-        - SentMethod
+        - Settings
       responses:
         200:
           description: Successful Request
@@ -464,7 +464,7 @@ paths:
     post:
       summary: Create SentMethod
       tags:
-        - SentMethod
+        - Settings
       requestBody:
         content:
           application/json:
@@ -496,7 +496,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-methods/gen/codbex-methods/api/SentMethod/SentMethodService.ts/{id}:
+  /codbex-methods/gen/codbex-methods/api/Settings/SentMethodService.ts/{id}:
     get:
       summary: Get SentMethod by Id
       parameters:
@@ -507,7 +507,7 @@ paths:
           schema:
             type: string
       tags:
-        - SentMethod
+        - Settings
       responses:
         200:
           description: Successful Request
@@ -545,7 +545,7 @@ paths:
           schema:
             type: string
       tags:
-        - SentMethod
+        - Settings
       requestBody:
         content:
           application/json:
@@ -593,7 +593,7 @@ paths:
           schema:
             type: string
       tags:
-        - SentMethod
+        - Settings
       responses:
         204:
           description: Successful Request
@@ -615,11 +615,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-methods/gen/codbex-methods/api/SentMethod/SentMethodService.ts/count:
+  /codbex-methods/gen/codbex-methods/api/Settings/SentMethodService.ts/count:
     get:
       summary: Count the number of SentMethod
       tags:
-        - SentMethod
+        - Settings
       responses:
         200:
           description: Successful Request
@@ -643,7 +643,7 @@ paths:
     post:
       summary: Count the number of SentMethod by SentMethodFilterOptions
       tags:
-        - SentMethod
+        - Settings
       requestBody:
         content:
           application/json:
@@ -725,11 +725,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-methods/gen/codbex-methods/api/SentMethod/SentMethodService.ts/search:
+  /codbex-methods/gen/codbex-methods/api/Settings/SentMethodService.ts/search:
     post:
       summary: Search SentMethod by SentMethodFilterOptions
       tags:
-        - SentMethod
+        - Settings
       requestBody:
         content:
           application/json:
