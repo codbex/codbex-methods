@@ -114,9 +114,9 @@ angular.module('page', ['blimpKit', 'platformView', 'EntityService'])
 			});
 		};
 
-		$scope.openFilter = (entity) => {
+		$scope.openFilter = () => {
 			Dialogs.showWindow({
-				id: 'SentMethod-details',
+				id: 'SentMethod-filter',
 				params: {
 					entity: $scope.filterEntity,
 				},
