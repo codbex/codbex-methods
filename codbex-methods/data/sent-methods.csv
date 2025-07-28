@@ -1,3 +1,4 @@
-"SENTMETHOD_ID","SENTMETHOD_NAME"
-"1","E-mail"
-"2","Courier"
+SENTMETHOD_ID,SENTMETHOD_NAME
+1,E-mail
+2,Delivery
+3,Pickup
