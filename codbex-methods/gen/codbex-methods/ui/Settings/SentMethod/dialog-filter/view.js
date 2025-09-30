@@ -6,6 +6,12 @@
 const viewData = {
     id: 'SentMethod-filter',
     label: 'SentMethod Filter',
+    translation: {
+        key: 'codbex-methods:codbex-methods-model.extName',
+        options: {
+            content: '$t(codbex-methods:codbex-methods-model.t.SENTMETHOD) $t(codbex-methods:codbex-methods-model.defaults.filter)',
+        }
+    },
     path: '/services/web/codbex-methods/gen/codbex-methods/ui/Settings/SentMethod/dialog-filter/index.html',
     perspectiveName: 'Settings'
 };

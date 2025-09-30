@@ -1,9 +1,23 @@
-angular.module('page', ['blimpKit', 'platformView', 'EntityService'])
+angular.module('page', ['blimpKit', 'platformView', 'platformLocale', 'EntityService'])
 	.config(['EntityServiceProvider', (EntityServiceProvider) => {
 		EntityServiceProvider.baseUrl = '/services/ts/codbex-methods/gen/codbex-methods/api/Settings/SentMethodService.ts';
 	}])
-	.controller('PageController', ($scope, EntityService, Extensions, ButtonStates) => {
+	.controller('PageController', ($scope, EntityService, Extensions, LocaleService, ButtonStates) => {
 		const Dialogs = new DialogHub();
+		let translated = {
+			yes: 'Yes',
+			no: 'No',
+			deleteConfirm: 'Are you sure you want to delete SentMethod? This action cannot be undone.',
+			deleteTitle: 'Delete SentMethod?'
+		};
+
+		LocaleService.onInit(() => {
+			translated.yes = LocaleService.t('codbex-methods:codbex-methods-model.defaults.yes');
+			translated.no = LocaleService.t('codbex-methods:codbex-methods-model.defaults.no');
+			translated.deleteTitle = LocaleService.t('codbex-methods:codbex-methods-model.defaults.deleteTitle', { name: '$t(codbex-methods:codbex-methods-model.t.SENTMETHOD)' });
+			translated.deleteConfirm = LocaleService.t('codbex-methods:codbex-methods-model.messages.deleteConfirm', { name: '$t(codbex-methods:codbex-methods-model.t.SENTMETHOD)' });
+		});
+
 		$scope.dataPage = 1;
 		$scope.dataCount = 0;
 		$scope.dataLimit = 20;
@@ -17,8 +31,10 @@ angular.module('page', ['blimpKit', 'platformView', 'EntityService'])
 		$scope.triggerPageAction = (action) => {
 			Dialogs.showWindow({
 				hasHeader: true,
-        		title: action.label,
+        		title: LocaleService.t(action.translation.key, action.translation.options, action.label),
 				path: action.path,
+				maxWidth: action.maxWidth,
+				maxHeight: action.maxHeight,
 				closeButton: true
 			});
 		};
@@ -26,7 +42,7 @@ angular.module('page', ['blimpKit', 'platformView', 'EntityService'])
 		$scope.triggerEntityAction = (action) => {
 			Dialogs.showWindow({
 				hasHeader: true,
-        		title: action.label,
+        		title: LocaleService.t(action.translation.key, action.translation.options, action.label),
 				path: action.path,
 				params: {
 					id: $scope.entity.Id
@@ -80,17 +96,19 @@ angular.module('page', ['blimpKit', 'platformView', 'EntityService'])
 				request.then((response) => {
 					$scope.data = response.data;
 				}, (error) => {
+					const message = error.data ? error.data.message : '';
 					Dialogs.showAlert({
-						title: 'SentMethod',
-						message: `Unable to list/filter SentMethod: '${error.message}'`,
+						title: LocaleService.t('codbex-methods:codbex-methods-model.t.SENTMETHOD'),
+						message: LocaleService.t('codbex-methods:codbex-methods-model.messages.error.unableToLF', { name: '$t(codbex-methods:codbex-methods-model.t.SENTMETHOD)', message: message }),
 						type: AlertTypes.Error
 					});
 					console.error('EntityService:', error);
 				});
 			}, (error) => {
+				const message = error.data ? error.data.message : '';
 				Dialogs.showAlert({
-					title: 'SentMethod',
-					message: `Unable to count SentMethod: '${error.message}'`,
+					title: LocaleService.t('codbex-methods:codbex-methods-model.t.SENTMETHOD'),
+					message: LocaleService.t('codbex-methods:codbex-methods-model.messages.error.unableToCount', { name: '$t(codbex-methods:codbex-methods-model.t.SENTMETHOD)', message: message }),
 					type: AlertTypes.Error
 				});
 				console.error('EntityService:', error);
@@ -149,16 +167,16 @@ angular.module('page', ['blimpKit', 'platformView', 'EntityService'])
 
 		$scope.deleteEntity = (entity) => {
 			let id = entity.Id;
-			Dialog.showDialog({
-				title: 'Delete SentMethod?',
-				message: `Are you sure you want to delete SentMethod? This action cannot be undone.`,
+			Dialogs.showDialog({
+				title: translated.deleteTitle,
+				message: translated.deleteConfirm,
 				buttons: [{
 					id: 'delete-btn-yes',
 					state: ButtonStates.Emphasized,
-					label: 'Yes',
+					label: translated.yes,
 				}, {
 					id: 'delete-btn-no',
-					label: 'No',
+					label: translated.no,
 				}]
 			}).then((buttonId) => {
 				if (buttonId === 'delete-btn-yes') {
@@ -168,8 +186,8 @@ angular.module('page', ['blimpKit', 'platformView', 'EntityService'])
 					}, (error) => {
 						const message = error.data ? error.data.message : '';
 						Dialogs.showAlert({
-							title: 'SentMethod',
-							message: `Unable to delete SentMethod: '${message}'`,
+							title: LocaleService.t('codbex-methods:codbex-methods-model.t.SENTMETHOD'),
+							message: LocaleService.t('codbex-methods:codbex-methods-model.messages.error.unableToDelete', { name: '$t(codbex-methods:codbex-methods-model.t.SENTMETHOD)', message: message }),
 							type: AlertTypes.Error
 						});
 						console.error('EntityService:', error);

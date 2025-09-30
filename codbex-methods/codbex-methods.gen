@@ -38,6 +38,7 @@
       "role": ""
     }
   },
+  "tprefix": "codbex-methods-model",
   "models": [
     {
       "properties": [
@@ -104,6 +105,7 @@
       "menuIndex": "100",
       "menuKey": "paymentmethod",
       "menuLabel": "PaymentMethod",
+      "multilingual": "true",
       "name": "PaymentMethod",
       "perspectiveHeader": "",
       "perspectiveIcon": "/services/web/resources/unicons/copy.svg",
@@ -188,6 +190,7 @@
       "menuIndex": "100",
       "menuKey": "sentmethod",
       "menuLabel": "SentMethod",
+      "multilingual": "true",
       "name": "SentMethod",
       "perspectiveHeader": "",
       "perspectiveIcon": "/services/web/resources/unicons/copy.svg",

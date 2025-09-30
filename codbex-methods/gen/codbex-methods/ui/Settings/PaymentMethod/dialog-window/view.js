@@ -6,6 +6,9 @@
 const viewData = {
     id: 'PaymentMethod-details',
     label: 'PaymentMethod',
+    translation: {
+        key: 'codbex-methods:codbex-methods-model.t.PAYMENTMETHOD',
+    },
     path: '/services/web/codbex-methods/gen/codbex-methods/ui/Settings/PaymentMethod/dialog-window/index.html',
     perspectiveName: 'Settings'
 };

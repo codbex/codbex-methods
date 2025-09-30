@@ -6,6 +6,12 @@
 const viewData = {
     id: 'PaymentMethod-filter',
     label: 'PaymentMethod Filter',
+    translation: {
+        key: 'codbex-methods:codbex-methods-model.extName',
+        options: {
+            content: '$t(codbex-methods:codbex-methods-model.t.PAYMENTMETHOD) $t(codbex-methods:codbex-methods-model.defaults.filter)',
+        }
+    },
     path: '/services/web/codbex-methods/gen/codbex-methods/ui/Settings/PaymentMethod/dialog-filter/index.html',
     perspectiveName: 'Settings'
 };

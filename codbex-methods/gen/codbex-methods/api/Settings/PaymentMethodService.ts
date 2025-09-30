@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Put, Delete, response } from "sdk/http"
+import { Controller, Get, Post, Put, Delete, request, response } from "sdk/http"
 import { Extensions } from "sdk/extensions"
 import { PaymentMethodRepository, PaymentMethodEntityOptions } from "../../dao/Settings/PaymentMethodRepository";
 import { user } from "sdk/security"
@@ -19,7 +19,8 @@ class PaymentMethodService {
             this.checkPermissions("read");
             const options: PaymentMethodEntityOptions = {
                 $limit: ctx.queryParameters["$limit"] ? parseInt(ctx.queryParameters["$limit"]) : undefined,
-                $offset: ctx.queryParameters["$offset"] ? parseInt(ctx.queryParameters["$offset"]) : undefined
+                $offset: ctx.queryParameters["$offset"] ? parseInt(ctx.queryParameters["$offset"]) : undefined,
+                $language: request.getLocale().slice(0, 2)
             };
 
             return this.repository.findAll(options);
@@ -77,7 +78,10 @@ class PaymentMethodService {
         try {
             this.checkPermissions("read");
             const id = parseInt(ctx.pathParameters.id);
-            const entity = this.repository.findById(id);
+            const options: PaymentMethodEntityOptions = {
+                $language: request.getLocale().slice(0, 2)
+            };
+            const entity = this.repository.findById(id, options);
             if (entity) {
                 return entity;
             } else {

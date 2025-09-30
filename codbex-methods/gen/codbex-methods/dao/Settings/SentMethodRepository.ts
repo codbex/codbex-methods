@@ -1,4 +1,4 @@
-import { query } from "sdk/db";
+import { sql, query } from "sdk/db";
 import { producer } from "sdk/messaging";
 import { extensions } from "sdk/extensions";
 import { dao as daoApi } from "sdk/db";
@@ -52,9 +52,10 @@ export interface SentMethodEntityOptions {
     $order?: 'ASC' | 'DESC',
     $offset?: number,
     $limit?: number,
+    $language?: string
 }
 
-interface SentMethodEntityEvent {
+export interface SentMethodEntityEvent {
     readonly operation: 'create' | 'update' | 'delete';
     readonly table: string;
     readonly entity: Partial<SentMethodEntity>;
@@ -65,7 +66,7 @@ interface SentMethodEntityEvent {
     }
 }
 
-interface SentMethodUpdateEntityEvent extends SentMethodEntityEvent {
+export interface SentMethodUpdateEntityEvent extends SentMethodEntityEvent {
     readonly previousEntity: SentMethodEntity;
 }
 
@@ -96,11 +97,61 @@ export class SentMethodRepository {
     }
 
     public findAll(options: SentMethodEntityOptions = {}): SentMethodEntity[] {
-        return this.dao.list(options);
+        let list = this.dao.list(options);
+        try {
+            let script = sql.getDialect().select().column("*").from('"' + SentMethodRepository.DEFINITION.table + '_LANG"').where('Language = ?').build();
+            const resultSet = query.execute(script, [options.$language]);
+            if (resultSet !== null && resultSet[0] !== null) {
+                let translatedProperties = Object.getOwnPropertyNames(resultSet[0]);
+                let maps = [];
+                for (let i = 0; i < translatedProperties.length - 2; i++) {
+                    maps[i] = {};
+                }
+                resultSet.forEach((r) => {
+                    for (let i = 0; i < translatedProperties.length - 2; i++) {
+                        maps[i][r[translatedProperties[0]]] = r[translatedProperties[i + 1]];
+                    }
+                });
+                list.forEach((r) => {
+                    for (let i = 0; i < translatedProperties.length - 2; i++) {
+                        if (maps[i][r[translatedProperties[0]]]) {
+                            r[translatedProperties[i + 1]] = maps[i][r[translatedProperties[0]]];
+                        }
+                    }
+
+                });
+            }
+        } catch (Error) {
+            console.error("Entity is marked as language dependent, but no language table present: " + SentMethodRepository.DEFINITION.table);
+        }
+        return list;
     }
 
-    public findById(id: number): SentMethodEntity | undefined {
+    public findById(id: number, options: SentMethodEntityOptions = {}): SentMethodEntity | undefined {
         const entity = this.dao.find(id);
+        if (entity) {
+            try {
+                let script = sql.getDialect().select().column("*").from('"' + SentMethodRepository.DEFINITION.table + '_LANG"').where('Language = ?').where('Id = ?').build();
+                const resultSet = query.execute(script, [options.$language, id]);
+                let translatedProperties = Object.getOwnPropertyNames(resultSet[0]);
+                let maps = [];
+                for (let i = 0; i < translatedProperties.length - 2; i++) {
+                    maps[i] = {};
+                }
+                resultSet.forEach((r) => {
+                    for (let i = 0; i < translatedProperties.length - 2; i++) {
+                        maps[i][r[translatedProperties[0]]] = r[translatedProperties[i + 1]];
+                    }
+                });
+                for (let i = 0; i < translatedProperties.length - 2; i++) {
+                    if (maps[i][entity[translatedProperties[0]]]) {
+                        entity[translatedProperties[i + 1]] = maps[i][entity[translatedProperties[0]]];
+                    }
+                }
+            } catch (Error) {
+                console.error("Entity is marked as language dependent, but no language table present: " + SentMethodRepository.DEFINITION.table);
+            }
+        }
         return entity ?? undefined;
     }
 

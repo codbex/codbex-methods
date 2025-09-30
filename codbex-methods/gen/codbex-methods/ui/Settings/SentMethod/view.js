@@ -6,6 +6,9 @@
 const viewData = {
     id: 'SentMethod',
     label: 'SentMethod',
+    translation: {
+        key: 'codbex-methods:codbex-methods-model.t.SENTMETHOD',
+    },
     region: 'center',
     lazyLoad: true,
 	autoFocusTab: false,

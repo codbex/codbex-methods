@@ -6,6 +6,9 @@
 const viewData = {
     id: 'SentMethod-details',
     label: 'SentMethod',
+    translation: {
+        key: 'codbex-methods:codbex-methods-model.t.SENTMETHOD',
+    },
     path: '/services/web/codbex-methods/gen/codbex-methods/ui/Settings/SentMethod/dialog-window/index.html',
     perspectiveName: 'Settings'
 };

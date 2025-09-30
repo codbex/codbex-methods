@@ -6,6 +6,9 @@
 const viewData = {
     id: 'PaymentMethod',
     label: 'PaymentMethod',
+    translation: {
+        key: 'codbex-methods:codbex-methods-model.t.PAYMENTMETHOD',
+    },
     region: 'center',
     lazyLoad: true,
 	autoFocusTab: false,
