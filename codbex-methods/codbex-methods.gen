@@ -19,6 +19,7 @@
       "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
     }
   ],
+  "tprefix": "codbex-methods-model",
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
@@ -38,7 +39,6 @@
       "role": ""
     }
   },
-  "tprefix": "codbex-methods-model",
   "models": [
     {
       "properties": [
@@ -61,6 +61,7 @@
           "isCalculatedProperty": false,
           "widgetLabel": "Id",
           "widgetDropdownUrl": "",
+          "widgetDropdownControllerUrl": "",
           "dataTypeJava": "int",
           "dataTypeTypescript": "number",
           "inputRule": ""
@@ -85,6 +86,7 @@
           "isCalculatedProperty": false,
           "widgetLabel": "Name",
           "widgetDropdownUrl": "",
+          "widgetDropdownControllerUrl": "",
           "dataTypeJava": "string",
           "dataTypeTypescript": "string",
           "minLength": 0,
@@ -146,6 +148,7 @@
           "isCalculatedProperty": false,
           "widgetLabel": "Id",
           "widgetDropdownUrl": "",
+          "widgetDropdownControllerUrl": "",
           "dataTypeJava": "int",
           "dataTypeTypescript": "number",
           "inputRule": ""
@@ -170,6 +173,7 @@
           "isCalculatedProperty": false,
           "widgetLabel": "Name",
           "widgetDropdownUrl": "",
+          "widgetDropdownControllerUrl": "",
           "dataTypeJava": "string",
           "dataTypeTypescript": "string",
           "minLength": 0,
