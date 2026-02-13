@@ -2,28 +2,15 @@
   "tablePrefix": "CODBEX_",
   "brand": "codbex",
   "brandUrl": "https://www.codbex.com/",
-  "title": "Methods Managing module",
-  "description": "Module for managing methods",
-  "dataSource": "DefaultDB",
-  "fileName": "codbex-methods",
-  "genFolderName": "codbex-methods",
-  "roles": [
-    {
-      "entityName": "PaymentMethod",
-      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
-      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess"
-    },
-    {
-      "entityName": "SentMethod",
-      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
-      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
-    }
-  ],
-  "tprefix": "codbex-methods-model",
+  "title": "Methods management module",
+  "description": "Managing methods data",
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
-  "templateId": "template-application-angular/template/template.js",
+  "templateId": "template-application-angular-v2/template/template.js",
+  "fileName": "codbex-methods",
+  "genFolderName": "codbex-methods",
+  "dataSource": "DefaultDB",
   "perspectives": {
     "Settings": {
       "views": [
@@ -39,6 +26,19 @@
       "role": ""
     }
   },
+  "roles": [
+    {
+      "entityName": "PaymentMethod",
+      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
+      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess"
+    },
+    {
+      "entityName": "SentMethod",
+      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
+      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
+    }
+  ],
+  "tprefix": "codbex-methods-model",
   "models": [
     {
       "properties": [
