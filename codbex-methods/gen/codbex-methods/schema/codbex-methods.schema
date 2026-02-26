@@ -15,7 +15,7 @@
                     {
                         "type": "VARCHAR",
                         "length": 20,
-                        "nullable": true,
+                        "unique": true,
                         "name": "PAYMENTMETHOD_NAME"
                     }
                 ]
@@ -34,7 +34,7 @@
                     {
                         "type": "VARCHAR",
                         "length": 20,
-                        "nullable": true,
+                        "unique": true,
                         "name": "SENTMETHOD_NAME"
                     }
                 ]

@@ -4,13 +4,26 @@
   "brandUrl": "https://www.codbex.com/",
   "title": "Methods Management Module",
   "description": "Managing Methods Data",
+  "fileName": "codbex-methods",
+  "genFolderName": "codbex-methods",
+  "dataSource": "DefaultDB",
+  "roles": [
+    {
+      "entityName": "PaymentMethod",
+      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
+      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess"
+    },
+    {
+      "entityName": "SentMethod",
+      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
+      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
+    }
+  ],
+  "tprefix": "codbex-methods-model",
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
   "templateId": "template-application-angular-v2/template/template.js",
-  "fileName": "codbex-methods",
-  "genFolderName": "codbex-methods",
-  "dataSource": "DefaultDB",
   "perspectives": {
     "Settings": {
       "views": [
@@ -26,19 +39,6 @@
       "role": ""
     }
   },
-  "roles": [
-    {
-      "entityName": "PaymentMethod",
-      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
-      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess"
-    },
-    {
-      "entityName": "SentMethod",
-      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
-      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
-    }
-  ],
-  "tprefix": "codbex-methods-model",
   "models": [
     {
       "properties": [
@@ -69,20 +69,20 @@
         {
           "dataLength": "20",
           "dataName": "PAYMENTMETHOD_NAME",
-          "dataNullable": true,
+          "dataNullable": false,
           "dataType": "VARCHAR",
+          "dataUnique": true,
           "description": "",
+          "isRequiredProperty": true,
           "name": "Name",
           "tooltip": "",
           "widgetIsMajor": true,
           "widgetLength": "20",
           "widgetSize": "",
           "widgetType": "TEXTBOX",
-          "dataNotNull": false,
+          "dataNotNull": true,
           "dataAutoIncrement": false,
           "dataPrimaryKey": false,
-          "dataUnique": false,
-          "isRequiredProperty": false,
           "isCalculatedProperty": false,
           "widgetLabel": "Name",
           "widgetDropdownUrl": "",
@@ -156,20 +156,20 @@
         {
           "dataLength": "20",
           "dataName": "SENTMETHOD_NAME",
-          "dataNullable": true,
+          "dataNullable": false,
           "dataType": "VARCHAR",
+          "dataUnique": true,
           "description": "",
+          "isRequiredProperty": true,
           "name": "Name",
           "tooltip": "",
           "widgetIsMajor": true,
           "widgetLength": "20",
           "widgetSize": "",
           "widgetType": "TEXTBOX",
-          "dataNotNull": false,
+          "dataNotNull": true,
           "dataAutoIncrement": false,
           "dataPrimaryKey": false,
-          "dataUnique": false,
-          "isRequiredProperty": false,
           "isCalculatedProperty": false,
           "widgetLabel": "Name",
           "widgetDropdownUrl": "",
