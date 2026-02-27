@@ -4,6 +4,7 @@
             {
                 "properties": [
                     {
+                        "auditType": "NONE",
                         "dataAutoIncrement": "true",
                         "dataName": "PAYMENTMETHOD_ID",
                         "dataNullable": "true",
@@ -18,11 +19,14 @@
                         "widgetType": "TEXTBOX"
                     },
                     {
+                        "auditType": "NONE",
                         "dataLength": "20",
                         "dataName": "PAYMENTMETHOD_NAME",
-                        "dataNullable": "true",
+                        "dataNullable": "false",
                         "dataType": "VARCHAR",
+                        "dataUnique": "true",
                         "description": "",
+                        "isRequiredProperty": "true",
                         "name": "Name",
                         "tooltip": "",
                         "widgetIsMajor": "true",
@@ -63,6 +67,7 @@
             {
                 "properties": [
                     {
+                        "auditType": "NONE",
                         "dataAutoIncrement": "true",
                         "dataName": "SENTMETHOD_ID",
                         "dataNullable": "true",
@@ -77,11 +82,14 @@
                         "widgetType": "TEXTBOX"
                     },
                     {
+                        "auditType": "NONE",
                         "dataLength": "20",
                         "dataName": "SENTMETHOD_NAME",
-                        "dataNullable": "true",
+                        "dataNullable": "false",
                         "dataType": "VARCHAR",
+                        "dataUnique": "true",
                         "description": "",
+                        "isRequiredProperty": "true",
                         "name": "Name",
                         "tooltip": "",
                         "widgetIsMajor": "true",

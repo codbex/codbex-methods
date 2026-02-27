@@ -5,11 +5,11 @@ import { dao as daoApi } from "@aerokit/sdk/db";
 
 export interface SentMethodEntity {
     readonly Id: number;
-    Name?: string;
+    Name: string;
 }
 
 export interface SentMethodCreateEntity {
-    readonly Name?: string;
+    readonly Name: string;
 }
 
 export interface SentMethodUpdateEntity extends SentMethodCreateEntity {
@@ -86,6 +86,7 @@ export class SentMethodRepository {
                 name: "Name",
                 column: "SENTMETHOD_NAME",
                 type: "VARCHAR",
+                required: true
             }
         ]
     };
