@@ -43,6 +43,7 @@
     {
       "properties": [
         {
+          "auditType": "NONE",
           "dataAutoIncrement": true,
           "dataName": "PAYMENTMETHOD_ID",
           "dataNullable": true,
@@ -67,6 +68,7 @@
           "inputRule": ""
         },
         {
+          "auditType": "NONE",
           "dataLength": "20",
           "dataName": "PAYMENTMETHOD_NAME",
           "dataNullable": false,
@@ -130,6 +132,7 @@
     {
       "properties": [
         {
+          "auditType": "NONE",
           "dataAutoIncrement": true,
           "dataName": "SENTMETHOD_ID",
           "dataNullable": true,
@@ -154,6 +157,7 @@
           "inputRule": ""
         },
         {
+          "auditType": "NONE",
           "dataLength": "20",
           "dataName": "SENTMETHOD_NAME",
           "dataNullable": false,
