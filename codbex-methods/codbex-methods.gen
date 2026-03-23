@@ -4,26 +4,13 @@
   "brandUrl": "https://www.codbex.com/",
   "title": "Methods Management Module",
   "description": "Managing Methods Data",
-  "fileName": "codbex-methods",
-  "genFolderName": "codbex-methods",
-  "dataSource": "DefaultDB",
-  "roles": [
-    {
-      "entityName": "PaymentMethod",
-      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
-      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess"
-    },
-    {
-      "entityName": "SentMethod",
-      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
-      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
-    }
-  ],
-  "tprefix": "codbex-methods-model",
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
   "templateId": "template-application-angular-v2/template/template.js",
+  "fileName": "codbex-methods",
+  "genFolderName": "codbex-methods",
+  "dataSource": "DefaultDB",
   "perspectives": {
     "Settings": {
       "views": [
@@ -39,6 +26,19 @@
       "role": ""
     }
   },
+  "roles": [
+    {
+      "entityName": "PaymentMethod",
+      "roleRead": "codbex-methods.PaymentMethod.PaymentMethodReadOnly",
+      "roleWrite": "codbex-methods.PaymentMethod.PaymentMethodFullAccess"
+    },
+    {
+      "entityName": "SentMethod",
+      "roleRead": "codbex-methods.SentMethod.SentMethodReadOnly",
+      "roleWrite": "codbex-methods.SentMethod.SentMethodFullAccess"
+    }
+  ],
+  "tprefix": "codbex-methods-model",
   "models": [
     {
       "properties": [
@@ -60,6 +60,7 @@
           "dataUnique": false,
           "isRequiredProperty": false,
           "isCalculatedProperty": false,
+          "isReadOnlyProperty": false,
           "widgetLabel": "Id",
           "widgetDropdownUrl": "",
           "widgetDropdownControllerUrl": "",
@@ -86,6 +87,7 @@
           "dataAutoIncrement": false,
           "dataPrimaryKey": false,
           "isCalculatedProperty": false,
+          "isReadOnlyProperty": false,
           "widgetLabel": "Name",
           "widgetDropdownUrl": "",
           "widgetDropdownControllerUrl": "",
@@ -149,6 +151,7 @@
           "dataUnique": false,
           "isRequiredProperty": false,
           "isCalculatedProperty": false,
+          "isReadOnlyProperty": false,
           "widgetLabel": "Id",
           "widgetDropdownUrl": "",
           "widgetDropdownControllerUrl": "",
@@ -175,6 +178,7 @@
           "dataAutoIncrement": false,
           "dataPrimaryKey": false,
           "isCalculatedProperty": false,
+          "isReadOnlyProperty": false,
           "widgetLabel": "Name",
           "widgetDropdownUrl": "",
           "widgetDropdownControllerUrl": "",
