@@ -16,15 +16,15 @@
 
 | Field              | Type     | Details                      | Description                              |
 | ------------------ | -------- |------------------------------| ---------------------------------------- |
-| PAYMENTMETHOD_ID   | INTEGER  | PK, Identity, Nullable       | Unique identifier for the payment method. |
-| PAYMENTMETHOD_NAME | VARCHAR  | Length: 20, Unique, Not null | Name of the payment method.              |
+| Id  | INTEGER  | PK, Identity, Nullable       | Unique identifier for the payment method. |
+| Name | VARCHAR  | Length: 20, Unique, Not null | Name of the payment method.              |
 
 ### Entity: `SentMethod`
 
 | Field            | Type     | Details                      | Description                              |
 | ---------------- | -------- |------------------------------| ---------------------------------------- |
-| SENTMETHOD_ID    | INTEGER  | PK, Identity, Nullable       | Unique identifier for the sent method.   |
-| SENTMETHOD_NAME  | VARCHAR  | Length: 20, Unique, Not null | Name of the sent method.                 |
+| Id  | INTEGER  | PK, Identity, Nullable       | Unique identifier for the sent method.   |
+| Name | VARCHAR  | Length: 20, Unique, Not null | Name of the sent method.                 |
 
 ## 🔗 Sample Data Modules
 
