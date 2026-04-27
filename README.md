@@ -1,12 +1,36 @@
-# codbex-methods
+# <img src="https://www.codbex.com/icon.svg" width="32" style="vertical-align: middle;"> codbex-methods
 
-Methods Management Application
+## 📖 Table of Contents
+* [🗺️ Entity Data Model (EDM)](#️-entity-data-model-edm)
+* [🧩 Core Entities](#-core-entities)
+* [🔗 Sample Data Modules](#-sample-data-modules)
+* [🐳 Local Development with Docker](#-local-development-with-docker)
 
-### Model
+## 🗺️ Entity Data Model (EDM)
 
-![model](images/methods-model.png)
+![model](images/model.png)
 
-## Local Development with Docker
+## 🧩 Core Entities
+
+### Entity: `PaymentMethod`
+
+| Field              | Type     | Details                      | Description                              |
+| ------------------ | -------- |------------------------------| ---------------------------------------- |
+| Id  | INTEGER  | PK, Identity       | Unique identifier for the payment method. |
+| Name | VARCHAR  | Length: 20, Unique, Not null | Name of the payment method.              |
+
+### Entity: `SentMethod`
+
+| Field            | Type     | Details                      | Description                              |
+| ---------------- | -------- |------------------------------| ---------------------------------------- |
+| Id  | INTEGER  | PK, Identity       | Unique identifier for the sent method.   |
+| Name | VARCHAR  | Length: 20, Unique, Not null | Name of the sent method.                 |
+
+## 🔗 Sample Data Modules
+
+- [codbex-methods-data](https://github.com/codbex/codbex-methods-data)
+
+## 🐳 Local Development with Docker
 
 When running this project inside the codbex Atlas Docker image, you must provide authentication for installing dependencies from GitHub Packages.
 1. Create a GitHub Personal Access Token (PAT) with `read:packages` scope.
