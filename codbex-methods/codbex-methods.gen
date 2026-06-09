@@ -1,15 +1,17 @@
 {
   "tablePrefix": "CODBEX_",
   "brand": "codbex",
-  "brandUrl": "https://www.codbex.com",
-  "title": "Methods Managing Application",
-  "description": "Managing methods data",
+  "brandUrl": "https://www.codbex.com/",
+  "title": "Methods Management Module",
+  "description": "Managing Methods Data",
   "projectName": "codbex-methods",
   "workspaceName": "workspace",
   "filePath": "codbex-methods.model",
-  "templateId": "template-application-angular-v2/template/template.js",
+  "templateId": "template-application-angular-java/template/template.js",
   "fileName": "codbex-methods",
   "genFolderName": "codbex-methods",
+  "javaRuntime": true,
+  "javaGenFolderName": "codbex_methods",
   "dataSource": "DefaultDB",
   "perspectives": {
     "Settings": {
@@ -66,6 +68,7 @@
           "widgetDropdownControllerUrl": "",
           "dataTypeJava": "int",
           "dataTypeTypescript": "number",
+          "dataTypeJavaClass": "Integer",
           "inputRule": ""
         },
         {
@@ -93,6 +96,7 @@
           "widgetDropdownControllerUrl": "",
           "dataTypeJava": "string",
           "dataTypeTypescript": "string",
+          "dataTypeJavaClass": "String",
           "minLength": 0,
           "maxLength": 20,
           "inputRule": ""
@@ -125,6 +129,7 @@
       "tooltip": "PaymentMethod",
       "type": "SETTING",
       "dataSource": "DefaultDB",
+      "javaPerspectiveName": "settings",
       "referencedProjections": [],
       "primaryKeys": [
         "Id"
@@ -157,6 +162,7 @@
           "widgetDropdownControllerUrl": "",
           "dataTypeJava": "int",
           "dataTypeTypescript": "number",
+          "dataTypeJavaClass": "Integer",
           "inputRule": ""
         },
         {
@@ -184,6 +190,7 @@
           "widgetDropdownControllerUrl": "",
           "dataTypeJava": "string",
           "dataTypeTypescript": "string",
+          "dataTypeJavaClass": "String",
           "minLength": 0,
           "maxLength": 20,
           "inputRule": ""
@@ -216,6 +223,7 @@
       "tooltip": "SentMethod",
       "type": "SETTING",
       "dataSource": "DefaultDB",
+      "javaPerspectiveName": "settings",
       "referencedProjections": [],
       "primaryKeys": [
         "Id"
