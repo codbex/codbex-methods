@@ -1,0 +1,6 @@
+{
+    "module": "codbex-methods/gen/codbex-methods/ui/Settings/PaymentMethod/view.js",
+    "extensionPoint": "application-settings",
+    "description": "codbex-methods - Application View",
+    "role": "codbex-methods.PaymentMethod.PaymentMethodReadOnly,codbex-methods.PaymentMethod.PaymentMethodFullAccess"
+}

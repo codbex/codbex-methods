@@ -5,7 +5,6 @@ import gen.codbex_methods.data.settings.SentMethodRepository;
 
 import org.eclipse.dirigible.components.api.security.UserFacade;
 import org.eclipse.dirigible.sdk.platform.Documentation;
-import org.eclipse.dirigible.sdk.component.Inject;
 import org.eclipse.dirigible.sdk.http.Body;
 import org.eclipse.dirigible.sdk.http.Controller;
 import org.eclipse.dirigible.sdk.http.Delete;
@@ -30,8 +29,11 @@ public class SentMethodController {
 
     private static final Set<String> FILTER_FIELDS = Set.of("Id", "Name");
 
-    @Inject
-    private SentMethodRepository repository;
+    private final SentMethodRepository repository;
+
+    public SentMethodController(SentMethodRepository repository) {
+        this.repository = repository;
+    }
 
     @Get
     @Documentation("List SentMethod")

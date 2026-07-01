@@ -5,7 +5,6 @@ import gen.codbex_methods.data.settings.PaymentMethodRepository;
 
 import org.eclipse.dirigible.components.api.security.UserFacade;
 import org.eclipse.dirigible.sdk.platform.Documentation;
-import org.eclipse.dirigible.sdk.component.Inject;
 import org.eclipse.dirigible.sdk.http.Body;
 import org.eclipse.dirigible.sdk.http.Controller;
 import org.eclipse.dirigible.sdk.http.Delete;
@@ -30,8 +29,11 @@ public class PaymentMethodController {
 
     private static final Set<String> FILTER_FIELDS = Set.of("Id", "Name");
 
-    @Inject
-    private PaymentMethodRepository repository;
+    private final PaymentMethodRepository repository;
+
+    public PaymentMethodController(PaymentMethodRepository repository) {
+        this.repository = repository;
+    }
 
     @Get
     @Documentation("List PaymentMethod")

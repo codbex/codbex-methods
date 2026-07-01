@@ -1,0 +1,6 @@
+{
+    "module": "codbex-methods/gen/codbex-methods/ui/Settings/SentMethod/dialog-filter/view.js",
+    "extensionPoint": "application-windows",
+    "description": "codbex-methods - Application Dialog Window",
+    "role": "codbex-methods.SentMethod.SentMethodReadOnly,codbex-methods.SentMethod.SentMethodFullAccess"
+}
